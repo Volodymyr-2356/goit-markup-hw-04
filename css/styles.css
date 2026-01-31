@@ -147,8 +147,10 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image:
-    linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
     url(../images/hero-people-office.jpg);
 }
 .main-page-text {
@@ -240,17 +242,14 @@ img {
 
 .team-link {
   background-color: #fff;
-  box-shadow:
-    0 2px 1px 0 rgba(66, 1, 34, 0.08),
-    0 1px 1px 0 rgba(46, 47, 66, 0.16),
-    0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  box-shadow: 0 2px 1px 0 rgba(66, 1, 34, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
   border-radius: 0 0 4px 4px;
-  width: calc((100% - (24px * 3)) / 4);
+  flex-basis: calc((100% - (24px * 3)) / 4);
 }
 .team-list-icon {
   display: flex;
   column-gap: 24px;
-  justify-content: space-around;
 }
 
 .team-link-icon {
@@ -261,6 +260,11 @@ img {
   align-items: center;
   background-color: #4d5ae5;
   border-radius: 50%;
+  transition: background-color 250ms ease-in-out;
+}
+.team-link-icon:hover,
+.team-link-icon:focus {
+  background-color: #404bbf;
 }
 .team-icon {
   fill: #f4f4fd;
@@ -295,6 +299,7 @@ img {
   color: #434455;
   text-align: center;
   letter-spacing: 0.02em;
+  margin-bottom: 8px;
 }
 
 /* #endregion team */
@@ -327,10 +332,8 @@ img {
 }
 
 .portfolio-list-items:hover {
-  box-shadow:
-    0 2px 1px 0 rgba(46, 47, 66, 0.08),
-    0 1px 1px 0 rgba(46, 47, 66, 0.16),
-    0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-overlay-box {
@@ -345,11 +348,11 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  transform: scale(0);
+  transform: translateY(100%);
   transition: transform 250ms ease-in-out;
 }
 .portfolio-list-items:hover .portfolio-overlay {
-  transform: scale(1);
+  transform: translateY(0);
 }
 
 .portfolio-overlay-descr {
